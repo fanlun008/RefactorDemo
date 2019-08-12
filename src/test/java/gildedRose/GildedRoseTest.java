@@ -19,7 +19,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void test01() {
+    public void should_return_correct_result_given_ARGED_name_11_sellin_50_qulity() {
         Item[] items = new Item[] {new Item(AGED, 11, 50)};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
@@ -28,7 +28,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void test02() {
+    public void should_return_correct_result_given_ARGED_name_11_sellin_49_qulity() {
         Item[] items = new Item[] {new Item(AGED, 11, 49)};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
@@ -37,7 +37,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void test03() {
+    public void should_return_correct_result_given_ARGED_name_less_than_0_sellin_50_qulity() {
         Item[] items = new Item[] {new Item(AGED, -1, 48)};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
@@ -46,15 +46,16 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void test04() {
-        Item[] items = new Item[] {new Item(AGED, -1, 48)};
+    public void should_return_correct_result_given_ARGED_name_11_sellin_51_qulity() {
+        Item[] items = new Item[] {new Item(AGED, -1, 51)};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
         System.out.println(gildedRose.items[0]);
+        Assert.assertEquals("Aged Brie, -2, 51", gildedRose.items[0].toString());
     }
 
     @Test
-    public void test05() {
+    public void should_return_correct_result_given_BACKSTAGE_name_10_sellin_49_qulity() {
         Item[] items = new Item[] {new Item(BACKSTAGE, 10, 49)};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
@@ -63,7 +64,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void test06() {
+    public void should_return_correct_result_given_BACKSTAGE_name_10_sellin_48_qulity() {
         Item[] items = new Item[] {new Item(BACKSTAGE, 10, 48)};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
@@ -72,7 +73,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void test07() {
+    public void should_return_correct_result_given_BACKSTAGE_name_4_sellin_47_qulity() {
         Item[] items = new Item[] {new Item(BACKSTAGE, 4, 47)};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
@@ -81,7 +82,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void test08() {
+    public void should_return_correct_result_given_BACKSTAGE_name_0_sellin_50_qulity() {
         Item[] items = new Item[] {new Item(BACKSTAGE, 0, 50)};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
@@ -90,7 +91,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void test09() {
+    public void should_return_correct_result_given_SULFURAS_name_lessthan_0_sellin_49_qulity() {
         Item[] items = new Item[] {new Item(SULFURAS, -1, 49)};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
@@ -99,7 +100,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void test010() {
+    public void should_return_correct_result_given_OTHERNAME_name_lessthan_lessthan_0_sellin_49_qulity() {
         Item[] items = new Item[] {new Item(OTHERNAME, -1, 49)};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
